@@ -4,3 +4,7 @@
 require File.expand_path('../config/application', __FILE__)
 
 ArelLab::Application.load_tasks
+desc 'drop into the Pry console'
+task :console => :environment do
+  Pry.start
+end
